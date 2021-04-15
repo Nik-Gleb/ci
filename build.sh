@@ -1,4 +1,5 @@
 #!/bin/bash
+ANDROID_BUILD_TOOLS_VERSION=30.0.3
 apk=./output.apk
 values=values
 manifest=AndroidManifest.xml

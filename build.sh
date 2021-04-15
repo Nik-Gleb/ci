@@ -11,5 +11,6 @@ echo "<manifest xmlns:android='http://schemas.android.com/apk/res/android' packa
 ver_temp=${ANDROID_BUILD_TOOLS_VERSION%.*}
 version=${ver_temp%.*}
 flat="./${values}_${temp}.arsc.flat"
+echo $2
 ${ANDROID_HOME}/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/aapt2 link $flat -o $apk -I $ANDROID_HOME/platforms/android-$version/android.jar --manifest ./$manifest --stable-ids stableIds.txt
 rm ./$manifest && rm $flat && unzip $apk && rm $apk && rm ./$manifest

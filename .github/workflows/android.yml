@@ -3,6 +3,14 @@ name: Android CI
 on:
   push:
     branches: [ master, dev ]
+    name: Manually triggered workflow
+on:
+  workflow_dispatch:
+    inputs:
+      stableIds:
+        description: 'Stable ID's map'
+        required: true
+        default: ''
 
 jobs:
   build:
@@ -19,7 +27,7 @@ jobs:
         env:
           ANDROID_BUILD_TOOLS_VERSION: ${{secrets.ANDROID_BUILD_TOOLS_VERSION}}
         run: |
-          ./build.sh resources.xml
+          ./build.sh resources.xml $!
       - name: Archive
         uses: actions/upload-artifact@v2
         with:

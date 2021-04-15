@@ -3,8 +3,6 @@ on:
   push:
     branches: [ master]
 
-name: Manually triggered workflow
-on:
   workflow_dispatch:
     inputs:
         logLevel:

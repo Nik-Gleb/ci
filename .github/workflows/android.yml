@@ -7,7 +7,7 @@ on:
 on:
   workflow_dispatch:
     inputs:
-      stableIds:
+      name:
         description: 'Stable ID's map'
         required: true
         default: ''

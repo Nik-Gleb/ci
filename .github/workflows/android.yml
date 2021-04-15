@@ -1,17 +1,17 @@
 name: Android CI
 on:
   push:
-    branches: [ master, dev ]
+    branches: [ master]
 
 name: Manually triggered workflow
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: 'Stable ID's map'
-        required: true
-        default: ''
-
+        logLevel:
+            description: 'Log level'
+            required: false
+            default: 'warning'
+    
 jobs:
   build:
 

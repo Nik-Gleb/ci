@@ -7,8 +7,8 @@ manifest=AndroidManifest.xml
 filename=$(basename -- "$resources")
 temp=$(basename "$resources" .xml)
 echo "<manifest xmlns:android='http://schemas.android.com/apk/res/android' package='com.example.shimmers'/>" >> ./$manifest
-echo $1 >> ./$resources
-echo $2 >> ./$ids
+echo $1 | base64 --decode >> ./$resources
+echo $2 | base64 --decode >> ./$ids
 mkdir $values && cp $resources ./$values
 ${ANDROID_HOME}/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/aapt2 compile ./$values/$filename -o ./$temp -v && rm -r ./$values && unzip ./$temp && rm ./$temp
 ver_temp=${ANDROID_BUILD_TOOLS_VERSION%.*}

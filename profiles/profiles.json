@@ -1,18 +1,6 @@
 [
   {
     "eye": "grey",
-    "hair": "brown",
-    "emotion": "joy",
-    "gender": "male",
-    "ethnicity": "white",
-    "confidence": 0,
-    "length": "medium",
-    "id": "5e6805c46d3b380006d4b7a3",
-    "age": "elderly",
-    "picture": "Njc5NzY3LmpwZw"
-  },
-  {
-    "eye": "grey",
     "hair": "blond",
     "emotion": "joy",
     "gender": "female",
@@ -22,6 +10,18 @@
     "id": "5e680acc6d3b380006d5dab5",
     "age": "elderly",
     "picture": "NzE4NjgyLmpwZw"
+  },
+  {
+    "eye": "grey",
+    "hair": "brown",
+    "emotion": "joy",
+    "gender": "male",
+    "ethnicity": "white",
+    "confidence": 0,
+    "length": "medium",
+    "id": "5e6805c46d3b380006d4b7a3",
+    "age": "elderly",
+    "picture": "Njc5NzY3LmpwZw"
   },
   {
     "eye": "brown",
